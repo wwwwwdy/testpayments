@@ -10,8 +10,8 @@ from validator import SchemaValidator
 class CloudPaymentClient(AbstractInteractionClient):
     BASE_URL: ClassVar[str] = "https://api.cloudpayments.ru"
 
-    def __init__(self, base_url=None, timeout=None, loop=None) -> None:
-        self.BASE_URL = base_url if not base_url else self.BASE_URL
+    def __init__(self, base_url=BASE_URL, timeout=None, loop=None) -> None:
+        self.BASE_URL = base_url
         self.CONNECTOR = TCPConnector()
         self.SERVICE = "service"
         self.REQUEST_TIMEOUT = timeout
