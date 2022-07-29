@@ -1,0 +1,38 @@
+{
+    "PublicId": "test_api_00000000000000000000002",
+    "IpAddress": "111.111.111.111",
+    "Amount": 1790,
+    "JsonData": {
+        "CloudPayments": {
+            "customerReceipt": {
+                "items": [
+                    {
+                        "label": "Пицца Барбекю",
+                        "price": 450,
+                        "quantity": 2,
+                        "amount": 900,
+                        "vat": ""
+                    },
+                    {
+                        "label": "Крылышки Баффало",
+                        "price": 270,
+                        "quantity": 3,
+                        "amount": 810,
+                        "vat": ""
+                    },
+                    {
+                        "label": "Морс брусничный",
+                        "price": 80,
+                        "quantity": 1,
+                        "amount": 80,
+                        "vat": ""
+                    }
+                ],
+                "email": "test@test.com",
+                "phone": "898811111111"
+            }
+        }
+    },
+    "CardCryptogramPacket": "012202202200250102dqs5WUhMOMb0IQDD4YZ7rn079ebE1xUGVyAJaUgdDXRWgTgOMIphzcDA3WuoJceraITkzfrJXRI4YWGntJxMe1uAx+9YoYtQ9z2NbRsNDwcBjSVCo4qlz80AMuoBN+hV/MqhNryXw+GvZ/5z86FvjSrlOPE8A1uQ1wnGpQIGRP3/0gMfPLbRLV6S4BgAgK+98z8xJS2wMM+YzptCkxu0VNbxyoxksKYo2F/5gKisQNEhmYedr9e1yKgUlRPpwRWZUe96dqjkakaQekUSpECmrqVmiH1s2dLJZxwbFjbaaQsWZt2ZqI5kIB/QxVthuUjpSz07Wo5NmpjzP38HvnvuYA=="
+
+}

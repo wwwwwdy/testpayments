@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<form name="downloadForm" action="https://demo.cloudpayments.ru/acs" method="POST">
+		<input type="hidden" name="PaReq" value="{{pa_req}}">
+		<input type="hidden" name="MD" value="{{transation_id}}">
+		<input type="hidden" name="TermUrl" value="https://3de8-193-33-240-33.eu.ngrok.io/checkout/">
+	</form>
+	<script>
+		window.onload = submitForm;
+		function submitForm() { downloadForm.submit(); }
+	</script>
+</body>
+</html>
