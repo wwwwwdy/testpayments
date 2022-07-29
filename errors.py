@@ -4,7 +4,7 @@ from typing import Any, Dict, Optional
 class BaseInteractionError(Exception):
     default_message = 'Backend interaction error'
 
-    def __init__(self, *, service, method, message=None):
+    def __init__(self, *, service, method, message=None) -> None:
         self.message = message or self.default_message
         self.service = service
         self.method = method
@@ -28,7 +28,7 @@ class InteractionResponseError(BaseInteractionError):
         message: Optional[str] = None,
         response_status: Optional[str] = None,
         params: Optional[Dict[str, Any]] = None,
-    ):
+    ) -> None:
         """
         :param status_code: HTTP status code
         :param method: HTTP method

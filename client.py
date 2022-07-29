@@ -1,4 +1,4 @@
-from typing import ClassVar
+from typing import ClassVar, Dict, Any
 
 from aiohttp import TCPConnector
 
@@ -19,7 +19,7 @@ class CloudPaymentClient(AbstractInteractionClient):
         super().__init__()
 
     @SchemaValidator(Charge)
-    async def charge(self, data=None):
+    async def charge(self, data=None) -> Dict[str, Any]:
         response = await self._request(
             "POST",
             self.endpoint_url("payments/charge"),
