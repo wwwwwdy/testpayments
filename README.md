@@ -9,6 +9,7 @@
 
 Для тестирования тех или иных случаев, необходимо в документации (https://developers.cloudpayments.ru/#skript-checkout) сгенерировать криптограмму и поместить ее в data.json в поле CardCryptogramPacket
 Тестовые карты находятся здесь: https://developers.cloudpayments.ru/#testirovanie
+Варианты с не валидными данными карт не были реализованы
 
 Для корректного редиректа, в checkout.html необходимо указать свой корректный домен или использовать http://0.0.0.0:8080/
 ```
