@@ -1,16 +1,15 @@
 from typing import ClassVar
 
-
 from aiohttp import TCPConnector
 
+from abstract_client import AbstractInteractionClient
 from schema import Charge
 from validator import SchemaValidator
-from abstract_client import AbstractInteractionClient
 
 
 class CloudPaymentClient(AbstractInteractionClient):
     BASE_URL: ClassVar[str] = "https://api.cloudpayments.ru"
-    
+
     def __init__(self, base_url=None, timeout=None, loop=None) -> None:
         self.BASE_URL = base_url if not base_url else self.BASE_URL
         self.CONNECTOR = TCPConnector()

@@ -4,7 +4,6 @@ import time
 from itertools import chain
 from typing import Any, ClassVar, Dict, Optional, Type
 
-
 from aiohttp import ClientResponse, ClientSession, ClientTimeout, TCPConnector
 
 from errors import InteractionResponseError
@@ -25,7 +24,9 @@ class AbstractInteractionClient:
     def __init__(self) -> None:
         self.default_timeout: Optional[ClientTimeout] = None
         if self.REQUEST_TIMEOUT:
-            self.default_timeout = ClientTimeout(total=self.REQUEST_TIMEOUT, connect=self.CONNECT_TIMEOUT)
+            self.default_timeout = ClientTimeout(
+                total=self.REQUEST_TIMEOUT, connect=self.CONNECT_TIMEOUT
+            )
 
     def _get_session_cls(self) -> Type[ClientSession]:
         return ClientSession
@@ -61,7 +62,10 @@ class AbstractInteractionClient:
             params=None,
         )
 
-    async def _process_response(self, response: ClientResponse) -> Dict[str, Any]:
+    async def _process_response(
+            self,
+            response: ClientResponse
+    ) -> Dict[str, Any]:
         if response.status >= 400:
             await self._handle_response_error(response)
         return await response.json()

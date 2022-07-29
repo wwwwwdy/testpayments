@@ -16,7 +16,7 @@ class SchemaValidator:
             schema = marshmallow_dataclass.class_schema(self.schema)()
             schema_object = schema.load(data)
             schema_dict = {
-                k: v for k, v 
+                k: v for k, v
                 in schema.dump(schema_object).items()
                 if v is not None
             }
