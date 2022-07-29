@@ -6,6 +6,10 @@ authors = ["wwwwwdy <ant2.8949@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+aiohttp = "^3.8.1"
+ipython = "^8.4.0"
+marshmallow = "^3.17.0"
+marshmallow-dataclass = "^8.5.8"
 
 [tool.poetry.dev-dependencies]
 
